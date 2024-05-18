@@ -1,8 +1,11 @@
 import React from 'react'
 import { FaSearch, FaHeart } from 'react-icons/fa'
 import { CgUser } from 'react-icons/cg'
+import { Link, NavLink } from 'react-router-dom'
 
 function NavBar() {
+    const hover = 'hover:text-subMain transitions text-white'
+    const Hover = ({ isActive }) => isActive ? 'text-subMain' : hover
     return (
         <div className='bg-main shadow-md sticky top-0 z-20'>
             <div className='container max-auto py-6 px-2 lg:grid gap-10 grid-cols-7 justify-between items-center'>
@@ -26,16 +29,21 @@ function NavBar() {
                     </form>
                 </div>
                 <div className='col-span-3 font-medium text-sm hidden xl:gap-14 2xl:gap-19 justify-between lg:flex xl:justify-end items-center'>
-                    <p>Movies</p>
-                    <p>About</p>
-                    <p>contact</p>
-                    <p>Movies</p>
-                    <p><FaHeart className='w-8 h-8 ' />
-                        <div className='w-5 h-5 flex-col text-center rounded-full text-xs bg-subMain text-white absolute top-5 right-19'>
-                            3
-                        </div>
-                    </p>
+
+                    <NavLink to='/movies' className={Hover}>
+                        Movies
+                    </NavLink>
+                    <NavLink to='/about-us' className={Hover}>
+                        About-Us
+                    </NavLink>
+                    <NavLink to='/contact-us' className={Hover}>
+                        Contact-Us
+                    </NavLink>
                     <p><CgUser className='w-8 h-8' /></p>
+                    <FaHeart className='w-8 h-8' />
+                    <div className='w-5 h-5 flex-colo rounded-full text-xs bg-subMain text-white absolute top-5 right-1'>
+                        3
+                    </div>
                 </div>
             </div>
         </div>

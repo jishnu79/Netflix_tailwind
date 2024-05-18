@@ -11,7 +11,7 @@ function LayOut() {
         <NavBar/> 
         <Baner/>
         <PoppulerMovie/>
-        <Promo/>
+        <Promo/> 
         <FootBar/>
     </div> 
   )

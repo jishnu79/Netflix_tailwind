@@ -16,7 +16,7 @@ function Baner() {
                 speed={1000}
                 modules={[Autoplay]}
                 autoplay={{ delay: 1000, disableOnInteraction: false }}
-                className='w-full xl:h-96 bg-dry lg:h-64 h-48'
+                className='w-full xl:h-96 bg-dry lg:h-64 h-48 overflow-hidden' 
             >
                 {
                     Movie.slice(0, 6).map((mov, ind) => (

@@ -21,13 +21,13 @@ module.exports = {
         dry: '#0B0F29',
         star: '#FFB000',
         text: '#C0C0C0',
-        border: '#4b5563', 
+        border: '#4b5563',
         dryGray: '#E0D5D5'
       }
     },
   },
   plugins: [
-   
+
   ],
 }
 
