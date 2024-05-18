@@ -12,9 +12,11 @@ function NavBar() {
                 <div className='col-span-1 lg:block'>
 
                     <div className='col-span-1 lg:block '>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNmquSprvWMl9rWJi-7pTdXSbIiPB44egZnA&usqp=CAU"
-                            className='w-full h-12 object-contain'
-                            alt="" />
+                        <Link to="/">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNmquSprvWMl9rWJi-7pTdXSbIiPB44egZnA&usqp=CAU"
+                                className='w-full h-12 object-contain'
+                                alt="" />
+                        </Link>
                     </div>
                 </div>
                 <div className='col-span-3' >
