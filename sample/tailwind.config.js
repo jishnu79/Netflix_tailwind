@@ -8,7 +8,7 @@ module.exports = {
         rate: '400px'
       },
       screens: {
-        xs: '475px'
+        xs: '475px' 
       }
       ,
       fontSize: {

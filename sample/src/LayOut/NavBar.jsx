@@ -41,11 +41,8 @@ function NavBar() {
                     <NavLink to='/contact-us' className={Hover}>
                         Contact-Us
                     </NavLink>
-                    <p><CgUser className='w-8 h-8' /></p>
                     <FaHeart className='w-8 h-8' />
-                    <div className='w-5 h-5 flex-colo rounded-full text-xs bg-subMain text-white absolute top-5 right-1'>
-                        3
-                    </div>
+                    <p><CgUser className='w-8 h-8' /></p>
                 </div>
             </div>
         </div>

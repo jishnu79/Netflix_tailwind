@@ -5,11 +5,11 @@ import FootBar from '../LayOut/FootBar'
 function Movies() {
   return (
     <div className=' bg-main text-white'>
-        <NavBar/>
-       <div className='bg-white text-black'>
-       Movies
-       </div>
-        <FootBar/>
+      <NavBar />
+      <div className='bg-white text-black'>
+       hjg
+      </div>
+      <FootBar />
     </div>
   )
 }
