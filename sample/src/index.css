@@ -37,3 +37,9 @@ input:focus,textarea:focus,select:focus{
 .zIndex{
     z-index: 1000;
 }
+
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

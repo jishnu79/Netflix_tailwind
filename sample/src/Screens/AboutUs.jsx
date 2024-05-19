@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from '../LayOut/NavBar'
 import FootBar from '../LayOut/FootBar'
+import { Movie } from '../Data/MovieData'
 
 function AboutUs() {
   return (
