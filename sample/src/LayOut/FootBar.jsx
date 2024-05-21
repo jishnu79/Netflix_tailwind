@@ -1,9 +1,9 @@
 import React from 'react'
 import { data } from './Data/Data'
 
-function FootBar() {
+function FootBar() { 
     return (
-        <div className='bg-dry py-4 border-2 border-black'>
+        <div className='bg-dry py-4 border-2 border-black items-baseline'>
             <div className='container mx-auto px-2'>
                 <div className='grid grid-cols-2 md:grid-cols-7 xl:grid-cols-12 xl:ml-40 gap-5 sm-gap-9 lg:gap-11 xl:gap-7 py-10 justify-between'>
                     {

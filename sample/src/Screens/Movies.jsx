@@ -1,52 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../LayOut/NavBar'
 import FootBar from '../LayOut/FootBar'
 import Moviess from '../Components/Colle'
-import { Movie } from '../Data/MovieData'
 import Baner from '../Components/Home/Baner'
+import Trending from './MovieCollections.jsx/Trending'
+import TopRated from '../Components/Home/TopRate'
 
 
 function Movies() {
+  const [Movie, setState] = useState()
+  const apiFun = async () => {
+    try {
+      fetch("https://api.themoviedb.org/3/discover/movie?api_key=c57089eea8f386ce6e9559670e1ff424")
+        .then(res => res.json())
+        .then(res => setState(res.results))
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    apiFun()
+  }, [])
   return (
     <div className=' bg-main text-white '>
-      <NavBar /> 
-      <Baner/>
-      <div className='mb-6 mt-4'>
-        <h2 className='sm:text-xl font-bold text-lg  ml-5'>Popular Movies</h2>
-        <div className='relative flex items-center'>
-          <div id={'slider'} className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
-            {
-              Movie.slice(0, 8).map((mov, ind) => (
-                <Moviess key={ind} movie={mov} />
-              ))
-            }
-          </div>
-        </div>
-      </div>
-      <div className='mb-6 mt-4'>
-        <h2 className='sm:text-xl font-bold text-lg  ml-5'>Trending</h2>
-        <div className='relative flex items-center'>
-          <div id={'slider'} className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
-            {
-              Movie.slice(0, 8).map((mov, ind) => (
-                <Moviess key={ind} movie={mov} />
-              ))
-            }
-          </div>
-        </div>
-      </div>
-      <div className='mb-6 mt-4'>
-        <h2 className='sm:text-xl font-bold text-lg  ml-5'>Horer</h2>
-        <div className='relative flex items-center'>
-          <div id={'slider'} className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
-            {
-              Movie.slice(0, 8).map((mov, ind) => (
-                <Moviess key={ind} movie={mov} />
-              ))
-            }
-          </div>
-        </div>
-      </div>
+      <NavBar />
+      <Baner />
+
+     <Trending/>
+
+      <TopRated/>
+      
       <FootBar />
     </div>
   )

@@ -8,9 +8,9 @@ import TopRated from '../Components/Home/TopRate'
 
 function LayOut() {
   return (
-    <div  className=' bg-main text-white'>
+    <div  className='bg-main text-white'>
         <NavBar/> 
-        <Baner/>
+        <Baner/> 
         <PoppulerMovie/>
         <Promo/> 
         <TopRated/>
