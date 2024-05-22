@@ -21,7 +21,7 @@ input:focus,textarea:focus,select:focus{
 }
 .hoverd:hover{
     @apply flex-col
-}
+} 
 .flex-colo{
     @apply flex flex-col justify-center items-center
 }
